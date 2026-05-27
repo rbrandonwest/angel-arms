@@ -87,11 +87,10 @@
         -->
         <!-- FORM -->
         <form
-          class="reveal"
+          class="reveal contact-form"
           data-contact-form
           action="https://api.web3forms.com/submit"
-          method="POST"
-          style="background: white; padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm); min-width: 0;">
+          method="POST">
 
           <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
           <input type="hidden" name="subject" value="New message from AngelArmsPA.org" />
@@ -101,7 +100,7 @@
           <h2 class="heading-3" style="margin-bottom: 0.5rem;">Send us a message</h2>
           <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 2rem;">All inquiries are confidential.</p>
 
-            <div style="display: grid; gap: 1.25rem; grid-template-columns: 1fr 1fr;">
+            <div class="contact-form__name-row">
               <div class="field">
                 <label class="field__label" for="first-name">First name</label>
                 <input class="field__input" id="first-name" type="text" name="first-name" required />
@@ -191,7 +190,7 @@
     <style>
       .contact-grid {
         display: grid;
-        gap: 2.5rem;
+        gap: 2rem;
         grid-template-columns: 1fr;
         align-items: start;
       }
@@ -199,6 +198,32 @@
         .contact-grid {
           grid-template-columns: minmax(0, 1fr) 340px;
           gap: 3rem;
+        }
+      }
+
+      .contact-form {
+        background: white;
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        min-width: 0;
+      }
+      @media (min-width: 480px) {
+        .contact-form { padding: 2rem; }
+      }
+      @media (min-width: 768px) {
+        .contact-form { padding: 2.5rem; }
+      }
+
+      .contact-form__name-row {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 520px) {
+        .contact-form__name-row {
+          grid-template-columns: 1fr 1fr;
         }
       }
     </style>
