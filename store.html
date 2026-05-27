@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store — Faith Forward Ministries &amp; Angel Arms</title>
+  <meta name="description" content="A curated collection of books and resources we recommend for individuals and families in recovery, caregivers of NAS infants, and those walking through life transitions." />
+  <meta name="theme-color" content="#789c4c" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='100' y2='100'%3E%3Cstop stop-color='%23789c4c'/%3E%3Cstop offset='1' stop-color='%23507f9d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Georgia' font-size='52' font-weight='600' fill='white'%3EF%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    .book-cover {
+      aspect-ratio: 2/3;
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+    .book:hover .book-cover {
+      transform: translateY(-4px) rotate(-1deg);
+      box-shadow: var(--shadow);
+    }
+    .book-cover::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 6px;
+      background: rgba(0,0,0,0.15);
+    }
+    .book-cover-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      text-align: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      color: white;
+      font-size: 1.05rem;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: var(--ff-primary-tint);
+      color: var(--ff-primary-dark);
+    }
+    .badge--aa { background: var(--aa-primary-tint); color: var(--aa-primary-dark); }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container-tight site-nav__inner">
+      <a href="index.html" class="site-nav__brand">
+        <div class="site-nav__brand-mark" aria-hidden="true">F</div>
+        <div class="site-nav__brand-text">
+          <span class="site-nav__brand-name">Faith Forward Ministries</span>
+          <span class="site-nav__brand-sub">with Angel Arms</span>
+        </div>
+      </a>
+      <div class="site-nav__menu">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link" href="about.html">About</a>
+        <a class="site-nav__link" href="services.html">Services</a>
+        <a class="site-nav__link" href="resources.html">Resources</a>
+        <a class="site-nav__link active" href="store.html">Store</a>
+        <a class="site-nav__link" href="contact.html">Contact</a>
+        <a class="btn btn--primary site-nav__cta" href="donate.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          Donate
+        </a>
+      </div>
+      <button class="site-nav__toggle" aria-label="Open menu" data-menu-open>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu__close" aria-label="Close menu" data-menu-close>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a class="mobile-menu__link" href="index.html">Home</a>
+    <a class="mobile-menu__link" href="about.html">About</a>
+    <a class="mobile-menu__link" href="services.html">Services</a>
+    <a class="mobile-menu__link" href="resources.html">Resources</a>
+    <a class="mobile-menu__link" href="store.html">Store</a>
+    <a class="mobile-menu__link" href="contact.html">Contact</a>
+    <a class="mobile-menu__link" href="donate.html" style="color: var(--ff-primary-dark);">Donate →</a>
+  </div>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header page-header--warm">
+    <div class="container-tight">
+      <div class="reveal" style="max-width: 760px;">
+        <div class="eyebrow">Recommended reading</div>
+        <h1 class="heading-1 text-balance">Books &amp; resources from our shelves to yours.</h1>
+        <p class="lede" style="margin-top: 1.5rem;">
+          A small but carefully chosen collection — the books we hand out, lend out, and reach for ourselves. Purchases through these links may support our ministry at no extra cost to you.
+        </p>
+        <div style="margin-top: 1.75rem; padding: 1rem 1.25rem; background: white; border-radius: var(--radius); border: 1px solid var(--line); display: inline-flex; align-items: start; gap: 0.75rem; max-width: 560px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--slate)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <p style="font-size: 0.88rem; color: var(--slate); margin: 0; line-height: 1.55;">
+            <strong style="color: var(--charcoal);">A note on links:</strong> we use Amazon affiliate links where applicable, which may earn the ministry a small commission. We only recommend resources we've personally read or vetted.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CATEGORY FILTERS (decorative) ============ -->
+  <section style="padding: 1rem 0 3rem;">
+    <div class="container-tight">
+      <div class="reveal" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge">All</span>
+        <span class="badge" style="background: white; border: 1px solid var(--line); color: var(--slate);">Recovery</span>
+        <span class="badge" style="background: white; border: 1px solid var(--line); color: var(--slate);">Parenting</span>
+        <span class="badge" style="background: white; border: 1px solid var(--line); color: var(--slate);">NAS &amp; Infant Care</span>
+        <span class="badge" style="background: white; border: 1px solid var(--line); color: var(--slate);">Faith &amp; Encouragement</span>
+        <span class="badge" style="background: white; border: 1px solid var(--line); color: var(--slate);">Counseling</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORE GRID ============ -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container-tight">
+
+      <div style="display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));" class="reveal-stagger">
+
+        <!-- Book 1 -->
+        <a href="#" class="book" style="text-decoration: none; color: inherit;">
+          <div class="book-cover" style="background: linear-gradient(135deg, #5e7c3a 0%, #789c4c 100%);">
+            <div class="book-cover-label">In the<br />Realm of<br />Hungry Ghosts</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="badge" style="margin-bottom: 0.5rem;">Recovery</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.5rem 0 0.25rem;">In the Realm of Hungry Ghosts</h3>
+            <p style="font-size: 0.85rem; color: var(--slate-soft); margin: 0;">Gabor Maté · Close Encounters with Addiction</p>
+          </div>
+        </a>
+
+        <!-- Book 2 -->
+        <a href="#" class="book" style="text-decoration: none; color: inherit;">
+          <div class="book-cover" style="background: linear-gradient(135deg, #32647d 0%, #507f9d 100%);">
+            <div class="book-cover-label">The Connected<br />Child</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="badge badge--aa" style="margin-bottom: 0.5rem;">Parenting</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.5rem 0 0.25rem;">The Connected Child</h3>
+            <p style="font-size: 0.85rem; color: var(--slate-soft); margin: 0;">Karyn Purvis · Trauma-informed parenting</p>
+          </div>
+        </a>
+
+        <!-- Book 3 -->
+        <a href="#" class="book" style="text-decoration: none; color: inherit;">
+          <div class="book-cover" style="background: linear-gradient(135deg, #2c3540 0%, #4a5563 100%);">
+            <div class="book-cover-label">The Body<br />Keeps the<br />Score</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="badge" style="margin-bottom: 0.5rem;">Counseling</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.5rem 0 0.25rem;">The Body Keeps the Score</h3>
+            <p style="font-size: 0.85rem; color: var(--slate-soft); margin: 0;">Bessel van der Kolk · Brain, Mind, and Body in Healing</p>
+          </div>
+        </a>
+
+        <!-- Book 4 -->
+        <a href="#" class="book" style="text-decoration: none; color: inherit;">
+          <div class="book-cover" style="background: linear-gradient(135deg, #87b3cf 0%, #507f9d 100%);">
+            <div class="book-cover-label">Born<br />Exposed</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="badge badge--aa" style="margin-bottom: 0.5rem;">NAS &amp; Infant Care</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.5rem 0 0.25rem;">Born Exposed: Understanding NAS</h3>
+            <p style="font-size: 0.85rem; color: var(--slate-soft); margin: 0;">A guide for caregivers and foster families</p>
+          </div>
+        </a>
+
+        <!-- Book 5 -->
+        <a href="#" class="book" style="text-decoration: none; color: inherit;">
+          <div class="book-cover" style="background: linear-gradient(135deg, #a5c178 0%, #789c4c 100%);">
+            <div class="book-cover-label">Boundaries</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="badge" style="margin-bottom: 0.5rem;">Faith &amp; Encouragement</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.5rem 0 0.25rem;">Boundaries</h3>
+            <p style="font-size: 0.85rem; color: var(--slate-soft); margin: 0;">Cloud &amp; Townsend · When to Say Yes, How to Say No</p>
+          </div>
+        </a>
+
+        <!-- Book 6 -->
+        <a href="#" class="book" style="text-decoration: none; color: inherit;">
+          <div class="book-cover" style="background: linear-gradient(135deg, #e9b364 0%, #c98a3c 100%);">
+            <div class="book-cover-label">The Big<br />Book</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="badge" style="margin-bottom: 0.5rem;">Recovery</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.5rem 0 0.25rem;">Alcoholics Anonymous (The Big Book)</h3>
+            <p style="font-size: 0.85rem; color: var(--slate-soft); margin: 0;">Foundational text for AA recovery</p>
+          </div>
+        </a>
+
+        <!-- Book 7 -->
+        <a href="#" class="book" style="text-decoration: none; color: inherit;">
+          <div class="book-cover" style="background: linear-gradient(135deg, #b94c4c 0%, #8a2f2f 100%);">
+            <div class="book-cover-label">Codependent<br />No More</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="badge" style="margin-bottom: 0.5rem;">Recovery</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.5rem 0 0.25rem;">Codependent No More</h3>
+            <p style="font-size: 0.85rem; color: var(--slate-soft); margin: 0;">Melody Beattie · For loved ones of addicts</p>
+          </div>
+        </a>
+
+        <!-- Book 8 -->
+        <a href="#" class="book" style="text-decoration: none; color: inherit;">
+          <div class="book-cover" style="background: linear-gradient(135deg, #f4d58d 0%, #d4a85a 100%);">
+            <div class="book-cover-label" style="color: #4a2c10;">Jesus<br />Calling</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="badge" style="margin-bottom: 0.5rem;">Faith &amp; Encouragement</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.5rem 0 0.25rem;">Jesus Calling</h3>
+            <p style="font-size: 0.85rem; color: var(--slate-soft); margin: 0;">Sarah Young · 365 daily devotions</p>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="reveal" style="margin-top: 4rem; text-align: center;">
+        <p style="color: var(--slate); max-width: 60ch; margin: 0 auto 1.5rem;">More titles are added regularly. If there's a resource we should know about — let us know.</p>
+        <a href="contact.html" class="btn btn--ghost">Suggest a resource</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ALTERNATIVE GIVING ============ -->
+  <section class="section" style="background: var(--ff-primary-tint);">
+    <div class="container-tight">
+      <div class="reveal" style="max-width: 760px; margin-bottom: 2rem;">
+        <div class="eyebrow">Support beyond books</div>
+        <h2 class="heading-2 text-balance">Every purchase helps. Every dollar helps more.</h2>
+        <p class="lede" style="margin-top: 1.25rem;">
+          The simplest way to support our work is a direct donation — 100% of which goes back into the ministry. If you'd rather contribute through a purchase, the books above earn the ministry a small affiliate commission.
+        </p>
+      </div>
+      <div class="reveal" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a class="btn btn--primary btn--lg" href="donate.html">Donate directly</a>
+        <a class="btn btn--ghost btn--lg" href="contact.html">Other ways to give</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container-tight">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="site-nav__brand" style="color: white;">
+            <div class="site-nav__brand-mark" aria-hidden="true">F</div>
+            <div class="site-nav__brand-text">
+              <span class="site-nav__brand-name" style="color: white;">Faith Forward Ministries</span>
+              <span class="site-nav__brand-sub">with Angel Arms</span>
+            </div>
+          </a>
+          <p style="margin-top: 1.25rem; font-size: 0.92rem; line-height: 1.6; max-width: 36ch;">
+            A 501(c)(3) faith-based human services facility serving children and families in crisis across Westmoreland &amp; Indiana Counties.
+          </p>
+        </div>
+        <div>
+          <div class="site-footer__title">Ministry</div>
+          <ul class="site-footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="services.html#angel-arms">Angel Arms</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="site-footer__title">Get involved</div>
+          <ul class="site-footer__list">
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Volunteer</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="site-footer__title">Visit &amp; reach us</div>
+          <ul class="site-footer__list">
+            <li>338 Main St, Latrobe, PA 15650</li>
+            <li>60 &amp; 52 W. Market St, Blairsville, PA 15717</li>
+            <li><a href="tel:7245397900">724-539-7900</a></li>
+            <li><a href="sms:7245169492">Text 724-516-9492</a></li>
+            <li><a href="mailto:faithforwardpa@gmail.com">faithforwardpa@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div>© <span data-year>2026</span> Faith Forward Ministries, Inc. · A 501(c)(3) nonprofit · EIN on request</div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="#">Privacy</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

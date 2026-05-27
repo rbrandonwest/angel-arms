@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate — Faith Forward Ministries &amp; Angel Arms</title>
+  <meta name="description" content="Support Faith Forward Ministries and Angel Arms with a one-time or recurring donation. 100% of donations go back into the ministry. Tax-deductible 501(c)(3)." />
+  <meta name="theme-color" content="#789c4c" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='100' y2='100'%3E%3Cstop stop-color='%23789c4c'/%3E%3Cstop offset='1' stop-color='%23507f9d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Georgia' font-size='52' font-weight='600' fill='white'%3EF%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    .impact-level {
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      background: white;
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: all 0.25s var(--ease);
+    }
+    .impact-level:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .impact-amount {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      line-height: 1;
+      color: var(--ff-primary-dark);
+    }
+    .impact-amount--aa { color: var(--aa-primary-dark); }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container-tight site-nav__inner">
+      <a href="index.html" class="site-nav__brand">
+        <div class="site-nav__brand-mark" aria-hidden="true">F</div>
+        <div class="site-nav__brand-text">
+          <span class="site-nav__brand-name">Faith Forward Ministries</span>
+          <span class="site-nav__brand-sub">with Angel Arms</span>
+        </div>
+      </a>
+      <div class="site-nav__menu">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link" href="about.html">About</a>
+        <a class="site-nav__link" href="services.html">Services</a>
+        <a class="site-nav__link" href="resources.html">Resources</a>
+        <a class="site-nav__link" href="store.html">Store</a>
+        <a class="site-nav__link" href="contact.html">Contact</a>
+        <a class="btn btn--primary site-nav__cta" href="donate.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          Donate
+        </a>
+      </div>
+      <button class="site-nav__toggle" aria-label="Open menu" data-menu-open>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu__close" aria-label="Close menu" data-menu-close>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a class="mobile-menu__link" href="index.html">Home</a>
+    <a class="mobile-menu__link" href="about.html">About</a>
+    <a class="mobile-menu__link" href="services.html">Services</a>
+    <a class="mobile-menu__link" href="resources.html">Resources</a>
+    <a class="mobile-menu__link" href="store.html">Store</a>
+    <a class="mobile-menu__link" href="contact.html">Contact</a>
+    <a class="mobile-menu__link" href="donate.html" style="color: var(--ff-primary-dark);">Donate →</a>
+  </div>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header page-header--ff">
+    <div class="container-tight">
+      <div class="reveal" style="max-width: 760px;">
+        <div class="eyebrow">Donate</div>
+        <h1 class="heading-1 text-balance">Your generosity is what keeps our doors open.</h1>
+        <p class="lede" style="margin-top: 1.5rem;">
+          Faith Forward Ministries is a 501(c)(3) nonprofit. <strong>100% of donations go back into the ministry</strong> — funding counseling, food assistance, infant care, and the community work you've seen on this site.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DONATE WIDGET ============ -->
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container-tight">
+
+      <div style="display: grid; gap: 3rem; grid-template-columns: 1.2fr 1fr; align-items: start;" id="give-grid">
+
+        <!-- WIDGET PLACEHOLDER -->
+        <div class="reveal" style="background: white; padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow);">
+          <h2 class="heading-3" style="margin-bottom: 0.5rem;">Give online</h2>
+          <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 2rem;">Secure, encrypted, and processed by Donorbox. Choose a one-time gift or set up a monthly contribution.</p>
+
+          <!--
+            ============================================================
+            DONORBOX EMBED — Replace the placeholder below with your live
+            embed code after you create your campaign at donorbox.org.
+
+            Example embed (paste in place of the placeholder div):
+
+            <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+            <iframe src="https://donorbox.org/embed/YOUR-CAMPAIGN-SLUG"
+                    name="donorbox"
+                    allowpaymentrequest="allowpaymentrequest"
+                    seamless="seamless"
+                    frameborder="0"
+                    scrolling="no"
+                    height="900px"
+                    width="100%"
+                    style="max-width: 500px; min-width: 250px; max-height: none !important;"
+                    allow="payment">
+            </iframe>
+            ============================================================
+          -->
+
+          <div style="border: 2px dashed var(--line); border-radius: var(--radius); padding: 2rem; text-align: center; background: var(--bg);">
+            <div style="width: 56px; height: 56px; margin: 0 auto 1rem; border-radius: 14px; background: var(--ff-primary-tint); display: grid; place-items: center; color: var(--ff-primary-dark);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+            </div>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 500; margin: 0 0 0.5rem;">Donorbox widget loads here</h3>
+            <p style="color: var(--slate); font-size: 0.92rem; margin: 0 0 1.5rem; max-width: 38ch; margin-inline: auto;">
+              Once your campaign is set up at donorbox.org, paste the embed code in <code style="background: var(--bg-warm); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.85rem;">donate.html</code> where the placeholder is.
+            </p>
+
+            <!-- Sample interactive amount buttons (so the page feels alive during development) -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; max-width: 320px; margin: 0 auto 1rem;">
+              <button type="button" style="padding: 0.65rem; border: 1px solid var(--line); border-radius: 8px; background: white; font-weight: 600; cursor: pointer; font-family: inherit;">$25</button>
+              <button type="button" style="padding: 0.65rem; border: 1px solid var(--ff-primary); border-radius: 8px; background: var(--ff-primary); color: white; font-weight: 600; cursor: pointer; font-family: inherit;">$50</button>
+              <button type="button" style="padding: 0.65rem; border: 1px solid var(--line); border-radius: 8px; background: white; font-weight: 600; cursor: pointer; font-family: inherit;">$100</button>
+              <button type="button" style="padding: 0.65rem; border: 1px solid var(--line); border-radius: 8px; background: white; font-weight: 600; cursor: pointer; font-family: inherit;">$250</button>
+              <button type="button" style="padding: 0.65rem; border: 1px solid var(--line); border-radius: 8px; background: white; font-weight: 600; cursor: pointer; font-family: inherit;">$500</button>
+              <button type="button" style="padding: 0.65rem; border: 1px solid var(--line); border-radius: 8px; background: white; font-weight: 600; cursor: pointer; font-family: inherit;">Other</button>
+            </div>
+            <button type="button" class="btn btn--primary btn--lg" style="width: 100%; max-width: 320px; margin-top: 0.5rem;">
+              Continue to donate
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; align-items: center; font-size: 0.82rem; color: var(--slate-soft); justify-content: center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure, encrypted, and PCI-compliant via Donorbox.
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="reveal" style="display: grid; gap: 1.25rem; align-content: start;">
+
+          <div class="card" style="padding: 1.75rem; background: var(--charcoal); color: white; border: none;">
+            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.55); font-weight: 600; margin-bottom: 0.75rem;">Tax-deductible</div>
+            <p style="margin: 0 0 1rem; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
+              Faith Forward Ministries is a registered 501(c)(3) nonprofit. Your gift is tax-deductible to the fullest extent permitted by law. You'll receive a receipt automatically.
+            </p>
+            <p style="margin: 0; font-size: 0.85rem; color: rgba(255,255,255,0.5);">EIN available on request</p>
+          </div>
+
+          <div class="card" style="padding: 1.75rem;">
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 500; margin: 0 0 1rem;">Where it goes</h3>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem;">
+              <div style="flex: 1; height: 10px; border-radius: 5px; background: var(--ff-primary-tint); position: relative; overflow: hidden;">
+                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: var(--ff-primary);"></div>
+              </div>
+              <span style="font-weight: 700; font-size: 0.95rem;">100%</span>
+            </div>
+            <p style="margin: 0; color: var(--slate); font-size: 0.9rem; line-height: 1.55;">
+              Every dollar goes directly into ministry programs — counseling, food, infant care, housing assistance, and community outreach.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 1.75rem;">
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 500; margin: 0 0 1rem;">Mail a check</h3>
+            <p style="margin: 0 0 0.85rem; color: var(--slate); font-size: 0.92rem; line-height: 1.55;">Prefer to send a check? Mail to:</p>
+            <p style="font-family: 'Fraunces', serif; font-size: 1.05rem; line-height: 1.45; margin: 0; letter-spacing: -0.01em;">
+              Faith Forward Ministries<br />
+              338 Main Street<br />
+              Latrobe, PA 15650
+            </p>
+          </div>
+
+        </aside>
+      </div>
+      <style>
+        @media (max-width: 900px) {
+          #give-grid { grid-template-columns: 1fr !important; }
+        }
+      </style>
+    </div>
+  </section>
+
+  <!-- ============ IMPACT LEVELS ============ -->
+  <section class="section" style="background: var(--bg-warm);">
+    <div class="container-tight">
+
+      <div class="reveal" style="margin-bottom: 3rem; max-width: 660px;">
+        <div class="eyebrow">Your impact</div>
+        <h2 class="heading-2 text-balance">What your gift makes possible.</h2>
+      </div>
+
+      <div style="display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));" class="reveal-stagger">
+
+        <div class="impact-level">
+          <div class="impact-amount">$25</div>
+          <p style="margin: 0; color: var(--slate); font-size: 0.92rem; line-height: 1.55;">Provides a week of groceries for a family through our food pantry partnership.</p>
+        </div>
+
+        <div class="impact-level">
+          <div class="impact-amount">$50</div>
+          <p style="margin: 0; color: var(--slate); font-size: 0.92rem; line-height: 1.55;">Funds an hour of one-on-one counseling for an individual in recovery.</p>
+        </div>
+
+        <div class="impact-level">
+          <div class="impact-amount impact-amount--aa">$100</div>
+          <p style="margin: 0; color: var(--slate); font-size: 0.92rem; line-height: 1.55;">Covers a week of essentials (formula, diapers, supplies) for an Angel Arms infant.</p>
+        </div>
+
+        <div class="impact-level">
+          <div class="impact-amount impact-amount--aa">$250</div>
+          <p style="margin: 0; color: var(--slate); font-size: 0.92rem; line-height: 1.55;">Sponsors a family education workshop on caring for a child with NAS.</p>
+        </div>
+
+        <div class="impact-level">
+          <div class="impact-amount">$500</div>
+          <p style="margin: 0; color: var(--slate); font-size: 0.92rem; line-height: 1.55;">Helps with one month of utilities or rent for a family in emergency transition.</p>
+        </div>
+
+        <div class="impact-level">
+          <div class="impact-amount">$1,000+</div>
+          <p style="margin: 0; color: var(--slate); font-size: 0.92rem; line-height: 1.55;">Underwrites a multi-week support program — counseling, case work, and community.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OTHER WAYS TO GIVE ============ -->
+  <section class="section">
+    <div class="container-tight">
+
+      <div class="reveal" style="margin-bottom: 3rem; max-width: 720px;">
+        <div class="eyebrow">Other ways to give</div>
+        <h2 class="heading-2 text-balance">Beyond money — your time, talent, and connection matter.</h2>
+      </div>
+
+      <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));" class="reveal-stagger">
+
+        <article class="card">
+          <div class="card__icon card__icon--ff">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="card__title">Volunteer</h3>
+          <p class="card__body" style="margin-bottom: 1rem;">Join our community of volunteers — from food drives to family events to one-on-one mentorship.</p>
+          <a href="contact.html" style="color: var(--ff-primary-dark); font-weight: 600; text-decoration: none;">Sign up to volunteer →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon card__icon--ff">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+          </div>
+          <h3 class="card__title">Corporate &amp; Church Partnerships</h3>
+          <p class="card__body" style="margin-bottom: 1rem;">Bring your business or congregation alongside the work. Matched gifts, sponsorships, and service days.</p>
+          <a href="contact.html" style="color: var(--ff-primary-dark); font-weight: 600; text-decoration: none;">Start a partnership →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon card__icon--ff">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="card__title">In-Kind Donations</h3>
+          <p class="card__body" style="margin-bottom: 1rem;">Diapers, formula, gently used baby items, hygiene supplies, gift cards — we welcome physical donations.</p>
+          <a href="contact.html" style="color: var(--ff-primary-dark); font-weight: 600; text-decoration: none;">See current needs →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon card__icon--aa">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+          </div>
+          <h3 class="card__title">Recurring Giving</h3>
+          <p class="card__body" style="margin-bottom: 1rem;">Set up a monthly gift through our Donorbox widget. Stable funding is what allows us to plan for the long haul.</p>
+          <a href="#" style="color: var(--aa-primary-dark); font-weight: 600; text-decoration: none;">Give monthly ↑</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon card__icon--ff">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          </div>
+          <h3 class="card__title">Planned &amp; Legacy Giving</h3>
+          <p class="card__body" style="margin-bottom: 1rem;">Include Faith Forward Ministries in your estate, will, or trust to create lasting impact for generations.</p>
+          <a href="contact.html" style="color: var(--ff-primary-dark); font-weight: 600; text-decoration: none;">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon card__icon--ff">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18l-9 9-9-9z"/><path d="M12 2v9"/></svg>
+          </div>
+          <h3 class="card__title">Pray With Us</h3>
+          <p class="card__body" style="margin-bottom: 1rem;">Add Faith Forward and Angel Arms to your prayer list. Some of our biggest needs aren't financial.</p>
+          <a href="contact.html" style="color: var(--ff-primary-dark); font-weight: 600; text-decoration: none;">Receive prayer updates →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE ============ -->
+  <section class="section" style="background: var(--ff-primary); color: white; padding-block: 5rem;">
+    <div class="container-tight" style="max-width: 880px; text-align: center;">
+      <div class="reveal">
+        <span style="display: block; font-size: 4rem; line-height: 0.5; font-family: 'Fraunces', serif; color: rgba(255,255,255,0.4); margin-bottom: 1rem;">"</span>
+        <p style="font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 400; line-height: 1.4; letter-spacing: -0.015em; color: white; text-wrap: balance; margin: 0;">
+          Every gift, no matter the size, is a vote for hope. It says: I see my neighbor. I'm in their corner. I believe restoration is possible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container-tight">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="site-nav__brand" style="color: white;">
+            <div class="site-nav__brand-mark" aria-hidden="true">F</div>
+            <div class="site-nav__brand-text">
+              <span class="site-nav__brand-name" style="color: white;">Faith Forward Ministries</span>
+              <span class="site-nav__brand-sub">with Angel Arms</span>
+            </div>
+          </a>
+          <p style="margin-top: 1.25rem; font-size: 0.92rem; line-height: 1.6; max-width: 36ch;">
+            A 501(c)(3) faith-based human services facility serving children and families in crisis across Westmoreland &amp; Indiana Counties.
+          </p>
+        </div>
+        <div>
+          <div class="site-footer__title">Ministry</div>
+          <ul class="site-footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="services.html#angel-arms">Angel Arms</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="site-footer__title">Get involved</div>
+          <ul class="site-footer__list">
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Volunteer</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="site-footer__title">Visit &amp; reach us</div>
+          <ul class="site-footer__list">
+            <li>338 Main St, Latrobe, PA 15650</li>
+            <li>60 &amp; 52 W. Market St, Blairsville, PA 15717</li>
+            <li><a href="tel:7245397900">724-539-7900</a></li>
+            <li><a href="sms:7245169492">Text 724-516-9492</a></li>
+            <li><a href="mailto:faithforwardpa@gmail.com">faithforwardpa@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div>© <span data-year>2026</span> Faith Forward Ministries, Inc. · A 501(c)(3) nonprofit · EIN on request</div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="#">Privacy</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
