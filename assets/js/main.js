@@ -85,8 +85,10 @@
       };
 
       const endpoint = form.getAttribute('action') || '';
-      if (!endpoint || endpoint.includes('YOUR_FORM_ID')) {
-        setStatus('Form not yet configured. Replace YOUR_FORM_ID in contact.html with your Formspree endpoint.', false);
+      const accessKeyInput = form.querySelector('input[name="access_key"]');
+      const accessKey = accessKeyInput ? accessKeyInput.value : '';
+      if (!endpoint || (endpoint.includes('web3forms.com') && (!accessKey || accessKey === 'YOUR_ACCESS_KEY'))) {
+        setStatus('Form not yet configured. Replace YOUR_ACCESS_KEY in contact.html with your Web3Forms access key.', false);
         return;
       }
 

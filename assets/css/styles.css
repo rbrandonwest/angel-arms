@@ -111,7 +111,7 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--ff-primary) 0%, var(--aa-primary) 100%);
+  background: linear-gradient(135deg, var(--aa-primary) 0%, var(--ff-primary) 100%);
   display: grid;
   place-items: center;
   color: white;
@@ -317,12 +317,25 @@ body {
 
 /* ---- Section primitives ---- */
 .section {
-  padding-block: 5rem;
+  padding-block: 3.25rem;
 }
 
-@media (min-width: 768px) {
-  .section { padding-block: 7rem; }
+@media (min-width: 640px) {
+  .section { padding-block: 4.5rem; }
 }
+
+@media (min-width: 1024px) {
+  .section { padding-block: 6.5rem; }
+}
+
+/* Variants for sections that need a slightly different rhythm */
+.section--snug { padding-block: 2.75rem; }
+@media (min-width: 640px) { .section--snug { padding-block: 3.75rem; } }
+@media (min-width: 1024px) { .section--snug { padding-block: 5rem; } }
+
+.section--cta { padding-block: 3rem; }
+@media (min-width: 640px) { .section--cta { padding-block: 4.5rem; } }
+@media (min-width: 1024px) { .section--cta { padding-block: 6rem; } }
 
 .eyebrow {
   display: inline-flex;
@@ -385,7 +398,7 @@ body {
 /* ---- Hero ---- */
 .hero {
   position: relative;
-  padding: 10rem 0 5rem;
+  padding: 7rem 0 3rem;
   overflow: hidden;
 }
 
@@ -685,12 +698,16 @@ body {
 
 /* ---- Page header (interior pages) ---- */
 .page-header {
-  padding: 9rem 0 4rem;
+  padding: 6.5rem 0 2.5rem;
   position: relative;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
+  .page-header { padding: 9.5rem 0 4rem; }
+}
+
+@media (min-width: 1024px) {
   .page-header { padding: 11rem 0 5rem; }
 }
 
