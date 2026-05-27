@@ -66,29 +66,54 @@
   const y = document.querySelector('[data-year]');
   if (y) y.textContent = new Date().getFullYear();
 
-  /* ---- Contact form mock submit (front-end only) ---- */
+  /* ---- Contact form submit (AJAX -> Formspree-compatible) ---- */
   const form = document.querySelector('[data-contact-form]');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const status = form.querySelector('[data-form-status]');
       const button = form.querySelector('button[type="submit"]');
-      if (button) {
-        button.disabled = true;
-        button.textContent = 'Sending…';
+      const setStatus = (msg, ok) => {
+        if (!status) return;
+        status.textContent = msg;
+        status.style.color = ok ? 'var(--ff-primary-dark)' : '#b94c4c';
+      };
+      const setButton = (label, disabled) => {
+        if (!button) return;
+        button.disabled = disabled;
+        button.innerHTML = label;
+      };
+
+      const endpoint = form.getAttribute('action') || '';
+      if (!endpoint || endpoint.includes('YOUR_FORM_ID')) {
+        setStatus('Form not yet configured. Replace YOUR_FORM_ID in contact.html with your Formspree endpoint.', false);
+        return;
       }
-      // In production, wire to a real endpoint (Formspree, Netlify Forms, etc.)
-      setTimeout(() => {
-        if (status) {
-          status.textContent = 'Thank you — your message has been received. We will follow up within one business day.';
-          status.style.color = 'var(--ff-primary-dark)';
+
+      setButton('Sending…', true);
+      setStatus('', true);
+
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          setStatus('Thank you — your message has been received. We will follow up within one business day.', true);
+          setButton('Send message', false);
+        } else {
+          const data = await res.json().catch(() => ({}));
+          const errMsg = (data && data.errors && data.errors.map((x) => x.message).join(', ')) || 'Something went wrong. Please try again, or email us directly.';
+          setStatus(errMsg, false);
+          setButton('Send message', false);
         }
-        form.reset();
-        if (button) {
-          button.disabled = false;
-          button.textContent = 'Send message';
-        }
-      }, 800);
+      } catch (err) {
+        setStatus('Network error. Please try again, or email us directly at faithforwardpa@gmail.com.', false);
+        setButton('Send message', false);
+      }
     });
   }
 })();

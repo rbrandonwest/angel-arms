@@ -101,6 +101,117 @@
     </div>
   </section>
 
+  <!-- ============ FOUNDER ============ -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container-tight">
+      <div class="founder-grid reveal">
+
+        <!-- Portrait -->
+        <div class="founder-photo">
+          <!-- TODO: Replace this placeholder with a photo of Dr. Dawn Hennessey.
+               Drop the image at assets/img/dr-dawn-hennessey.jpg and replace
+               this <div> with an <img> tag, e.g.:
+               <img src="assets/img/dr-dawn-hennessey.jpg" alt="Dr. Dawn Hennessey, founder of Faith Forward Ministries and Angel Arms" /> -->
+          <div class="founder-photo__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 200 200" style="width:60%; height:60%; opacity: 0.4;">
+              <circle cx="100" cy="80" r="35" fill="white"/>
+              <path d="M40 180 Q40 130 100 130 Q160 130 160 180 Z" fill="white"/>
+            </svg>
+            <div class="founder-photo__caption">Photo coming soon</div>
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="founder-bio">
+          <div class="eyebrow">Our founder</div>
+          <h2 class="heading-2 text-balance" style="margin-bottom: 0.75rem;">Dr. Dawn Hennessey</h2>
+          <p style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--ff-primary-dark); font-style: italic; margin: 0 0 1.5rem; letter-spacing: -0.01em;">Founder of Faith Forward Ministries &amp; Angel Arms</p>
+
+          <div style="display: grid; gap: 1.1rem; color: var(--slate); font-size: 1rem; line-height: 1.7;">
+            <p>
+              <em>Dr. Hennessey's full bio will be added here.</em> She is the visionary behind both Faith Forward Ministries and Angel Arms, having spent more than a decade walking with families through addiction recovery, foster care, trauma-informed parenting, and the care of infants and children exposed to substances.
+            </p>
+            <p>
+              <em>Placeholder bio paragraph two — credentials, education, career history, and the personal story that gave rise to this ministry. (To be filled in.)</em>
+            </p>
+          </div>
+
+          <!-- Books by the founder -->
+          <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line);">
+            <div style="font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate-soft); margin-bottom: 1rem;">Author of</div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="https://a.co/d/0g3nIiIV" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" style="font-size: 0.9rem;">Saving Isaac →</a>
+              <a href="https://a.co/d/0dRd12KE" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" style="font-size: 0.9rem;">Angel Arms Brighter Path →</a>
+              <a href="store.html" class="btn btn--ghost" style="font-size: 0.9rem;">See all in store</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <style>
+      .founder-grid {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 1fr;
+        align-items: start;
+        background: white;
+        border-radius: var(--radius-xl);
+        padding: 2.5rem;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+      }
+      @media (min-width: 768px) {
+        .founder-grid {
+          grid-template-columns: 280px 1fr;
+          gap: 3.5rem;
+          padding: 3rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .founder-grid {
+          grid-template-columns: 340px 1fr;
+        }
+      }
+
+      .founder-photo {
+        position: relative;
+        aspect-ratio: 4/5;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: linear-gradient(135deg, var(--ff-primary-light) 0%, var(--aa-primary-light) 100%);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .founder-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .founder-photo__placeholder {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .founder-photo__caption {
+        color: white;
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        opacity: 0.85;
+      }
+    </style>
+  </section>
+
   <!-- ============ TWO MISSION STATEMENTS ============ -->
   <section class="section" style="background: var(--bg-warm);">
     <div class="container-tight">

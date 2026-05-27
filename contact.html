@@ -72,13 +72,30 @@
   <!-- ============ FORM + DIRECT ============ -->
   <section class="section" style="padding-top: 2rem;">
     <div class="container-tight">
-      <div style="display: grid; gap: 3rem; grid-template-columns: 1fr;">
-        <div style="display: grid; gap: 3rem; grid-template-columns: 1.4fr 1fr; align-items: start;" class="contact-grid">
+      <div class="contact-grid">
 
-          <!-- FORM -->
-          <form class="reveal" data-contact-form style="background: white; padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm);">
-            <h2 class="heading-3" style="margin-bottom: 0.5rem;">Send us a message</h2>
-            <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 2rem;">All inquiries are confidential.</p>
+        <!--
+          ============================================================
+          FORMSPREE WIRING
+          1. Sign up free at https://formspree.io (50 submissions/mo).
+          2. Create a new form, point notifications at faithforwardpa@gmail.com.
+          3. Copy the form's endpoint (e.g. https://formspree.io/f/xrgjabcd).
+          4. Replace YOUR_FORM_ID below with the form ID Formspree gives you.
+          ============================================================
+        -->
+        <!-- FORM -->
+        <form
+          class="reveal"
+          data-contact-form
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          style="background: white; padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm); min-width: 0;">
+
+          <input type="hidden" name="_subject" value="New message from FaithForwardPA.org" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;" aria-hidden="true" />
+
+          <h2 class="heading-3" style="margin-bottom: 0.5rem;">Send us a message</h2>
+          <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 2rem;">All inquiries are confidential.</p>
 
             <div style="display: grid; gap: 1.25rem; grid-template-columns: 1fr 1fr;">
               <div class="field">
@@ -163,14 +180,22 @@
               <p style="margin: 0.4rem 0 0; font-size: 0.85rem; color: var(--slate-soft);">Responses within one business day.</p>
             </div>
 
-          </aside>
-        </div>
+        </aside>
 
       </div>
     </div>
     <style>
-      @media (max-width: 900px) {
-        .contact-grid { grid-template-columns: 1fr !important; }
+      .contact-grid {
+        display: grid;
+        gap: 2.5rem;
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+      @media (min-width: 900px) {
+        .contact-grid {
+          grid-template-columns: minmax(0, 1fr) 340px;
+          gap: 3rem;
+        }
       }
     </style>
   </section>
